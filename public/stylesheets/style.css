@@ -1,0 +1,70 @@
+body {
+  padding: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("/images/aa.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a {
+  color: #00B7FF;
+}
+.first, .second, .third {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 900px;
+}
+
+.first {
+  background-image: url("/images/apple.jpg");
+
+}
+
+.second {
+  background-image: url("/images/samsung.jpg");
+
+}
+
+.third {
+  background-image: url("/images/mi.jpg");
+
+}
+
+.createacc {
+    background-image: url("https://previews.123rf.com/images/miss_j/miss_j1211/miss_j121100007/16237332-%EC%A0%95%EC%9B%90%EC%97%90%EC%84%9C-%EC%95%84%EB%A6%84%EB%8B%A4%EC%9A%B4-%EB%85%B8%EB%9E%80-%EA%BD%83%EC%9D%98-%EA%B7%BC%EC%A0%91-%EC%B4%AC%EC%98%81.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.center{
+  position: absolute;
+  left: 0;
+  top: 75%;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+.center2{
+   position: relative;
+   left: 0;
+   top: 75%;
+   width: 100%;
+   text-align: center;
+   font-size: 18px;
+ }
+.center3{
+    position: relative;
+    left: 0;
+    top: 75%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+  }
+

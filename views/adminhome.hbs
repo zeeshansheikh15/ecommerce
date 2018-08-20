@@ -1,0 +1,202 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <style>
+        .vertical-menu {
+            width: 20%;
+            overflow-y: scroll;
+        }
+
+        .vertical-menu a {
+            background-color: #eee;
+            color: black;
+            display: block;
+            padding: 50px;
+            text-decoration: none;
+            font-size: 150%;
+        }
+
+        .vertical-menu a:hover {
+            background-color: #ccc;
+        }
+
+        .vertical-menu a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .zoom:hover {
+            transform: scale(1.25); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+            transition: transform .2s;
+        }
+        .skew:hover {
+            transform: skewY(20deg); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+            transition: transform .2s;
+        }
+
+
+        .boom:hover {
+            transform: scale(3);
+            transition: transform .2s;
+        }
+    </style>
+</head>
+<body>
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-primary sticky-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <button id="switch" onclick="myFunction()" class="zoom btn btn-dark ml-2 mr-lg-2" ><i class="fas fa-align-justify"></i></button>
+    <a href="/" class="zoom btn btn-dark ml-2 mr-lg-2" >Home</a>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+            <li class="nav-item">
+                <div class="btn-group">
+
+
+
+                        <a href="adminsignup.hbs" class="zoom btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">Create Admin
+                            <span class="caret"></span></a>
+
+
+                    <div class="dropdown">
+                        <button class="zoom btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">Xiaomi
+                            <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Redmi note 4</a></li>
+                            <li><a href="#">Redmi note 4 +</a></li>
+                            <li><a href="#">Redmi note 5</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </li>
+        </ul>
+
+
+        {{# if login}}
+            <a href="cart" class="zoom btn btn-info ml-1 mr-lg-1"> <i class="fas fa-shopping-cart"></i>Shopping Cart <span class="badge bg-warning">{{session.cart.totalqty}}</span></a>
+            <a href="profile" class="zoom btn btn-info ml-1 mr-lg-1"> <i class="fas fa-user"></i>Profile</a>
+            <a href="logout" class="zoom btn btn-info ml-2 mr-lg-2" >Logout</a>
+        {{else}}
+            <a href="signup" class="zoom btn btn-info ml-1 mr-lg-1" ><i class="fas fa-user"></i>Sign up</a>
+            <a href="login" class="zoom btn btn-info ml-1 mr-lg-1"><i class="fas fa-sign-in-alt"></i>Sign in</a>
+        {{/if}}
+
+
+
+        <form class="form-inline my-2 my-lg-0">
+            <input class="zoom form-control mr-lg-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="zoom btn btn-info ml-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+<div class="row ">
+
+    <!--<div id="toggle" class="vertical-menu col-md-4-* bg-dark position-fixed " style="width: 20%;   height: 1000px;">-->
+    <!--<a href="#" class="active">Home</a>-->
+    <!--<a href="#">Link 1</a>-->
+    <!--<a href="#">Link 2</a>-->
+    <!--<a href="#">Link 3</a>-->
+    <!--<a href="#">Link 4</a>-->
+    <!--<a href="#">Link 1</a>-->
+    <!--<a href="#">Link 2</a>-->
+    <!--<a href="#">Link 3</a>-->
+    <!--<a href="#">Link 4</a>-->
+    <!--<a href="#">Link 1</a>-->
+    <!--<a href="#">Link 2</a>-->
+    <!--<a href="#">Link 3</a>-->
+    <!--<a href="#">Link 4</a>-->
+    <!--<a href="#">Link 1</a>-->
+    <!--<a href="#">Link 2</a>-->
+    <!--<a href="#">Link 3</a>-->
+    <!--<a href="#">Link 4</a>-->
+    <!--</div>-->
+    <div id="toggle"  class="col-md-4-*  position-fixed " style="width: 20%;   height: 1200px;" >
+        <div class="d-md-flex flex-column flex-md-equal w-100 my-md-3 pl-md-3 ">
+            <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden " style="border-radius: 21px 21px 21px 21px;height: 685px;position: relative;border: 3px groove cyan;">
+                <div class="bg-info shadow-lg " style="left: 0;right: 0; height: 80px;top: 0; border-radius: 21px 21px 0 0;position: absolute;">
+                    <br><label><h4><b><i class="fas fa-user zoom"></i> Administrator Home</b></h4></label>
+                </div>
+
+                <div class=" shadow-lg " style="left: 0;right: 0; height: 100px;top: 90px; border-radius: 21px 21px 21px 21px;position: absolute;color: #1a2d41;">
+                    {{session.admin.email}}
+                </div>
+                <div class=" shadow-lg " style="left: 0;right: 0; height: 100px;top: 200px; border-radius: 21px 21px 21px 21px;position: absolute;color: #1a2d41;">
+                    <h6><b><br> <a href="vieworders">View Orders</a> </b></h6>
+                </div>
+                <div class=" shadow-lg " style="left: 0;right: 0; height: 100px;top: 310px; border-radius: 21px 21px 21px 21px;position: absolute;color: #1a2d41;">
+                    <h6><b><br> Apply now or in checkout</b></h6>
+                </div>
+                <div class=" shadow-lg " style="left: 0;right: 0; height: 100px;top: 420px; border-radius: 21px 21px 21px 21px;position: absolute;color: #1a2d41;">
+                    <h6><b><br> Apply now or in checkout</b></h6>
+                </div>
+                <div class=" shadow-lg " style="left: 0;right: 0; height: 100px;top: 530px; border-radius: 21px 21px 21px 21px;position: absolute;color: #1a2d41;">
+                    <h6><b> <br> Apply now or in checkout</b></h6>
+                </div>
+
+                <div class=" shadow-sm bg-primary" style="left: 0;right: 0; height: 70px;top:610px; border-radius:  0 0 21px 21px;position: absolute;">
+                    <br><label><h1></h1></label>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div id = "content" class="col-md-4-*   my-2" style="width: 75%;  margin-left: 20%; height: 1000px; transition-property: width;transition-duration: 0.5s;">
+        <div class="d-md-flex flex-column flex-md-equal w-100 my-md-3 pl-md-3">
+
+            <div class="shadow-lg  mr-md-3  pt-md-3 px-md-2 text-center text-white overflow-hidden" style=" margin-bottom:2%; border-radius: 21px 21px 21px 21px; ">
+                <div id="success" class="alert alert-success {{#if noMessage}} d-none {{/if}}">
+                    {{ successMsg }}
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script>
+    function myFunction() {
+        var y = document.getElementById("content");
+        var x = document.getElementById("toggle");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+            y.style.marginLeft = '20%';
+            y.style.width = '75%';
+        } else {
+            x.style.display = "none";
+            y.style.marginLeft = 0;
+            y.style.width = '95%';
+        }
+
+    }
+
+
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
